@@ -1,8 +1,8 @@
 from flask import Flask, request
 
 app = Flask(__name__)
-ACCESS_TOKEN = 'EAAPKZApNZBnrcBAEaZCMckkd5UQUES9PsC4CqBy8MKR1vOeMkg6Ev7KW2tzKRjHb7H1QDCmSqwOqsmLmTKVyacNHc1tkbkEj1hi8qowAZBoRCL74l0P42DPXGWrJkZACAzFui6JA99eCUjA02s4EGKL0oaRotHfoDhdSvnXVKaJZBO4wOyIxTngaFSWkCZCP9LteZClfTPQ6Dw88yWaYfiY2LQbwl5OlGeZCaKVohq3aTtAZDZD'
-VERIFY_TOKEN = 'blah3232ejdea1'
+ACCESS_TOKEN = '-' 
+VERIFY_TOKEN = '-'
 
 #We will receive messages that Facebook sends our bot at this endpoint 
 @app.route("/", methods=['GET', 'POST'])
