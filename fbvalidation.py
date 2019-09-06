@@ -1,4 +1,5 @@
 from flask import Flask, request
+#https://weblizar.com/blog/generate-facebook-access-token/ guide to get token
 
 app = Flask(__name__)
 ACCESS_TOKEN = '-' 
