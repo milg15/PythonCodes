@@ -8,8 +8,6 @@ li = []
 lo = []
 flg = True
 
-
-
 def popupf():
     popup = Tk()
     popup.resizable(width=False, height=False)
