@@ -1,11 +1,10 @@
 from bs4 import BeautifulSoup
-import requests
+from requests_html import HTMLSession
+import pandas as pd
 import urllib3
 
+#just so it doesn't annoy me
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-#import lxml.html as lh
-import pandas as pd
-from requests_html import HTMLSession
  
 # create an HTML Session object
 session = HTMLSession()
@@ -35,36 +34,3 @@ df['Source'] = pets_source
 df
 
 print (df)
-#from selenium import webdriver
-#from selenium.webdriver.chrome.options import Options
-
-"""chrome_options = Options()  
-chrome_options.add_argument("--headless")  
-driver = webdriver.Chrome(chrome_options=chrome_options)
-driver.get("https://www.wow-pets.com/realms/us/global")
-
-for tr in driver.find_elements_by_tag_name("tr"):
-    for td in tr.find_elements_by_tag_name("td"):
-        print(td.get_attribute("innerText"))"""
-
-#url = "https://www.wow-pets.com/realms/us/global"
-#response = requests.get(url, timeout=5)
-#content = BeautifulSoup(response.content, "html.parser")
-
-
-#header_petprice =  content.find('table', attrs={"class": "pet-values"}).text;
-#doc = lh.fromstring(response.content)
-#tr_elements = doc.xpath('//table[@class="pet-values"]/tbody/tr')
-"""file = open('Failed.txt', 'w')
-file.write(str(content))
-file.close()"""
-
-print('done')
-
-
-"""resp = requests.get("https://www.wow-pets.com/realms/us/global")
- 
-html = resp.content
-soup = BeautifulSoup(html)
- 
-option_tags = soup.find_all("tr")"""
